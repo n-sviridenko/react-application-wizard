@@ -1,5 +1,5 @@
-React app
-=========
+React application wizard
+========================
 
 - SSR
 - offline-first
@@ -15,9 +15,9 @@ Getting started
 ---------------
 
 1. Clone the repository:<br />
-`$ git clone https://github.com/n-sviridenko/react-app`<br />
+`$ git clone https://github.com/n-sviridenko/react-application-wizard`<br />
 and open its folder:<br />
-`$ cd react-app`
+`$ cd react-application-wizard`
 
 2. Install dependencies:<br />
 `$ npm install`<br />

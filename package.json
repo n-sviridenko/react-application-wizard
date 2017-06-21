@@ -1,11 +1,11 @@
 {
   "private": true,
-  "name": "react-app",
+  "name": "react-application-wizard",
   "version": "0.1.0",
-  "description": "React app",
+  "description": "React application wizard",
   "repository": {
     "type": "git",
-    "url": "git://github.com/n-sviridenko/react-app.git"
+    "url": "git://github.com/n-sviridenko/react-application-wizard.git"
   },
   "engines": {
     "npm": ">=3",
