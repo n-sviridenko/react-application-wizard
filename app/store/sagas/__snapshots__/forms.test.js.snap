@@ -1,0 +1,29 @@
+exports[`forms saga should execute resolve it failAction was received 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Object {
+        "foo": "bar",
+      },
+      "type": "TEST_REQUEST",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`forms saga should execute resolve it successAction was received 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Object {
+        "foo": "bar",
+      },
+      "type": "TEST_REQUEST",
+    },
+    "channel": null,
+  },
+}
+`;

@@ -24,7 +24,10 @@ and open its folder:<br />
 or using:<br />
 `$ yarn install`
 
-3. Launch the client:<br />
+3. Start the json-server to serve calls to API:<br />
+`$ yarn api:start`
+
+4. Launch the client:<br />
 `$ yarn start`
 
 More documentation

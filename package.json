@@ -19,7 +19,7 @@
     "extract-intl": "babel-node --presets latest,stage-0 -- ./internals/scripts/extract-intl.js",
     "npmcheckversion": "node ./internals/scripts/npmcheckversion.js",
     "preinstall": "npm run npmcheckversion",
-    "postinstall": "npm run env:copy && npm run build:dll",
+    "postinstall": "node ./internals/scripts/postinstall.js && npm run build:dll",
     "prebuild": "npm run build:clean",
     "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules",
     "postbuild": "npm run ssr:render-static-pages",
@@ -50,7 +50,7 @@
     "ssr:start": "cross-env NODE_ENV=development nodemon -q --ext js,json --watch server/middlewares --watch server/devRenderService.js server/devRenderService.js",
     "ssr:clean": "rimraf server/middlewares/generated.*",
     "ssr:render-static-pages": "babel-node --presets latest,stage-0 -- ./internals/scripts/render-static-pages.js ",
-    "env:copy": "node ./internals/scripts/copy-env.js"
+    "api:start": "json-server --watch db.json --port 3100 --delay 500"
   },
   "lint-staged": {
     "*.js": "lint:eslint"
@@ -304,6 +304,7 @@
     "image-webpack-loader": "2.0.0",
     "imports-loader": "0.7.0",
     "jest-cli": "18.1.0",
+    "json-server": "^0.10.1",
     "lint-staged": "3.3.0",
     "mkdirp": "^0.5.1",
     "ngrok": "2.2.6",
