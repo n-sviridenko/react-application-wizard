@@ -4,6 +4,7 @@
  */
 
 import { combineReducers } from 'redux-immutable';
+import { reducer as formReducer } from 'redux-form/immutable';
 
 import * as reducers from './reducers';
 
@@ -12,6 +13,7 @@ import * as reducers from './reducers';
  */
 export default function createReducer(asyncReducers) {
   return combineReducers({
+    form: formReducer,
     ...reducers,
     ...asyncReducers,
   });
