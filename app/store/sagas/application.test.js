@@ -1,6 +1,6 @@
 /* eslint-disable redux-saga/yield-effects */
 import { put, takeLatest } from 'redux-saga/effects';
-import { fromJS } from 'immutable';
+import { Map } from 'immutable';
 
 import * as actions from 'store/actions/application';
 import { show, showWatcher, create, createWatcher } from './application';
@@ -42,7 +42,16 @@ describe('application saga', () => {
 
     beforeEach(() => {
       createTask = create({
-        payload: fromJS({}),
+        payload: Map({
+          firstName: 'Nikita',
+          lastName: 'Sviridenko',
+          email: 'mail.sviridenko@gmail.com',
+          phone: null,
+          location: {
+            placeId: 'xxxx',
+            name: 'Lyon, France',
+          },
+        }),
       });
 
       const callDescriptor = createTask.next().value;

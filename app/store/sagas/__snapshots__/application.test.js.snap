@@ -1,3 +1,61 @@
+exports[`application saga create should dispatch the createFail if request was failed 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "post",
+      "applications",
+      Object {
+        "email": "mail.sviridenko@gmail.com",
+        "firstName": "Nikita",
+        "lastName": "Sviridenko",
+        "locationName": "Lyon, France",
+        "phone": null,
+      },
+      EntitySchema {
+        "_getId": [Function],
+        "_idAttribute": "id",
+        "_key": "application",
+        "_mergeStrategy": [Function],
+        "_processStrategy": [Function],
+        "schema": Object {},
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`application saga create should dispatch the createSuccess if request was succeeded 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "post",
+      "applications",
+      Object {
+        "email": "mail.sviridenko@gmail.com",
+        "firstName": "Nikita",
+        "lastName": "Sviridenko",
+        "locationName": "Lyon, France",
+        "phone": null,
+      },
+      EntitySchema {
+        "_getId": [Function],
+        "_idAttribute": "id",
+        "_key": "application",
+        "_mergeStrategy": [Function],
+        "_processStrategy": [Function],
+        "schema": Object {},
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
 exports[`application saga show should dispatch the showFail if request was failed 1`] = `
 Object {
   "@@redux-saga/IO": true,
