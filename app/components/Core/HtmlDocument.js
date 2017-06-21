@@ -4,6 +4,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import htmlescape from 'htmlescape';
 
+import * as config from 'config';
+
 // We use this component only on the server side.
 export default function HtmlDocument({ lang, head, css, appMarkup, state, assets, webpackDllNames }) {
   const attrs = head.htmlAttributes.toComponent();
@@ -60,6 +62,7 @@ export default function HtmlDocument({ lang, head, css, appMarkup, state, assets
 
         {/* for material-ui */}
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+        <script src={`https://maps.googleapis.com/maps/api/js?libraries=places&key=${config.googleApiKey}`}></script>
       </body>
     </html>
   );
